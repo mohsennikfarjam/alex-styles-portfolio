@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Styles | UI/UX Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">Alex<span>Styles</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1 class="fade-in">Crafting Digital <br><span class="gradient-text">Experiences</span></h1>
+                <p class="lead-text fade-in">UI/UX Designer specializing in accessible, user-centered, and visually stunning web applications.</p>
+                <div class="hero-cta fade-in">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>I am a passionate UI/UX designer with a background in front-end development. My goal is to bridge the gap between design and technology, creating products that are not only beautiful but also highly functional and accessible.</p>
+                    <div class="skills-grid">
+                        <span class="skill-tag" data-tooltip="Visual design and layout">UI Design</span>
+                        <span class="skill-tag" data-tooltip="User research and testing">UX Research</span>
+                        <span class="skill-tag" data-tooltip="HTML, CSS, JS">Front-End</span>
+                        <span class="skill-tag" data-tooltip="Making web for everyone">Accessibility</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <!-- Placeholder for Alex Styles image -->
+                        <div class="image-placeholder">AS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title center">Selected Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" id="project-1">
+                        <div class="project-image">
+                            <div class="image-placeholder">P1</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>EcoTrack Mobile App</h3>
+                            <p>A sustainable lifestyle tracking application with a focus on intuitive data visualization.</p>
+                            <button class="btn btn-small btn-open-modal" data-project="1">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="project-card" id="project-2">
+                        <div class="project-image">
+                            <div class="image-placeholder">P2</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Lumina E-Commerce</h3>
+                            <p>Modern e-commerce platform designed for high conversion and seamless user flow.</p>
+                            <button class="btn btn-small btn-open-modal" data-project="2">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="project-card" id="project-3">
+                        <div class="project-image">
+                            <div class="image-placeholder">P3</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Zenith Dashboard</h3>
+                            <p>A minimalist project management dashboard for creative teams.</p>
+                            <button class="btn btn-small btn-open-modal" data-project="3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container narrow">
+                <h2 class="section-title center">Let's Collaborate</h2>
+                <p class="center">Have a project in mind? I'd love to hear from you.</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Alex Styles. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">LI</a>
+                <a href="#" aria-label="GitHub">GH</a>
+                <a href="#" aria-label="Twitter">TW</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
